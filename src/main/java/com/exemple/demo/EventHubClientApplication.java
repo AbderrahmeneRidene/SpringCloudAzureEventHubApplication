@@ -12,7 +12,9 @@ import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
-public class EventHubClientApplication implements CommandLineRunner {
+public class EventHubClientApplication
+implements CommandLineRunner 
+{
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EventHubClientApplication.class);
 
@@ -33,10 +35,10 @@ public class EventHubClientApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         processorClient.start();
         TimeUnit.SECONDS.sleep(10);
-
+/*
         producerClient.send(Collections.singletonList(
                 new com.azure.messaging.eventhubs.EventData("Hello World")));
         LOGGER.info("Message sent to Event Hubs.");
-        producerClient.close();
+        producerClient.close();*/
     }
 }
